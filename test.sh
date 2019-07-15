@@ -14,6 +14,3 @@ kubeadm init --ignore-preflight-errors=all
 mkdir -p $HOME/.kube && rm -f $HOME/.kube/config && sudo cp -rf -i /etc/kubernetes/admin.conf $HOME/.kube/config && sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl apply -f https://cloud.weave.works/k8s/net
 kubeadm token create --print-join-command > /tmp/token.txt
-
-
-
