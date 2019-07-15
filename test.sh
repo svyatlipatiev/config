@@ -10,5 +10,8 @@ echo "deb http://apt.kubernetes.io kubernetes-xenial main" > /etc/apt/sources.li
 apt-get update
 apt-get install -y docker-ce kubelet kubeadm kubectl
 
+kubeadm init --ignore-preflight-errors=all
+
+
 
 
