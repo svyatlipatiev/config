@@ -16,3 +16,4 @@ kubectl apply -f https://cloud.weave.works/k8s/net
 kubeadm token create --print-join-command > /tmp/token.txt
 
 
+
