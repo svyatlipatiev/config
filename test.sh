@@ -11,7 +11,7 @@ apt-get update
 apt-get install -y docker-ce kubelet kubeadm kubectl
 
 kubeadm init --ignore-preflight-errors=all
-mkdir -p /home/azureuser/.kube && rm -f /home/azureuser/.kube/config && sudo cp -rf -i /etc/kubernetes/admin.conf /home/azureuser/.kube/config && sudo chown azureuser:azureuser home/azureuser/.kube/config
+mkdir -p /home/azureuser/.kube && rm -f /home/azureuser/.kube/config && sudo cp -rf -i /etc/kubernetes/admin.conf /home/azureuser/.kube/config && sudo chown azureuser:azureuser /home/azureuser/.kube/config
 sudo -u azureuser kubectl apply -f https://cloud.weave.works/k8s/net
 kubeadm token create --print-join-command > /tmp/token.txt
 
